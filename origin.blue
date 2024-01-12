@@ -714,7 +714,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		TabConfig.PremiumOnly = TabConfig.PremiumOnly or false
 
 		local TabFrame = SetChildren(SetProps(MakeElement("Button"), {
-			Size = UDim2.new(1, 0, 0, 30),
+			Size = UDim2.new(1, 0, 0, 25),
 			Parent = TabHolder
 		}), {
 			AddThemeObject(SetProps(MakeElement("Image", TabConfig.Icon), {
@@ -783,7 +783,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			local ElementFunction = {}
 			function ElementFunction:AddLabel(Text)
 				local LabelFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 30),
+					Size = UDim2.new(1, 0, 0, 25),
 					BackgroundTransparency = 0.7,
 					Parent = ItemParent
 				}), {
@@ -807,7 +807,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				Content = Content or "Content"
 
 				local ParagraphFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0, 30),
+					Size = UDim2.new(1, 0, 0, 25),
 					BackgroundTransparency = 0.7,
 					Parent = ItemParent
 				}), {
@@ -853,7 +853,7 @@ function OrionLib:MakeWindow(WindowConfig)
 				})
 
 				local ButtonFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0.1, 0),
+					Size = UDim2.new(1, 0, 0, 25),
 					Parent = ItemParent
 				}), {
 					AddThemeObject(SetProps(MakeElement("Label", ButtonConfig.Name, 15), {
@@ -1383,7 +1383,7 @@ function OrionLib:MakeWindow(WindowConfig)
 
 
 				local TextboxFrame = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 0, 5), {
-					Size = UDim2.new(1, 0, 0.9, 0),
+					Size = UDim2.new(1, 0, 0, 25),
 					Parent = ItemParent
 				}), {
 					AddThemeObject(SetProps(MakeElement("Label", TextboxConfig.Name, 15), {
