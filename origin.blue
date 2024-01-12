@@ -12,6 +12,19 @@ if style == "Default" or style == "Blob" or style == "Redstone" then
 else
 style = "Default"
 end
+if gethui then
+	gethui().ChildAdded:Connect(function(c)
+		if c.Name == "Orion" then
+			c.Name = tostring(math.random(11111,99999))
+		end
+	end)
+else
+	game.CoreGui.ChildAdded:Connect(function(c)
+		if c.Name == "Orion" then
+			c.Name = tostring(math.random(11111,99999))
+		end
+	end)
+end
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
