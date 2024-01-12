@@ -8,7 +8,7 @@ local style = "Default"
 if _G.style then
 style = _G.style
 end
-if style == "Default" or style == "Blob" then
+if style == "Default" or style == "Blob" or style == "Redstone" then
 else
 style = "Default"
 end
@@ -30,7 +30,15 @@ local OrionLib = {
 			Main = Color3.fromRGB(40,60,40),
 			Second = Color3.fromRGB(50,80,50),
 			Stroke = Color3.fromRGB(60, 100, 60),
-			Divider = Color3.fromRGB(60, 60, 100),
+			Divider = Color3.fromRGB(60, 100, 60),
+			Text = Color3.fromRGB(240, 240, 240),
+			TextDark = Color3.fromRGB(150, 150, 150)
+		},
+		Redstone = {
+			Main = Color3.fromRGB(60,40,40),
+			Second = Color3.fromRGB(80, 50,50),
+			Stroke = Color3.fromRGB(100, 60, 60),
+			Divider = Color3.fromRGB(100, 60, 60),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
 		}
