@@ -4,7 +4,14 @@ local RunService = game:GetService("RunService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HttpService = game:GetService("HttpService")
-
+local style = "Default"
+if _G.style then
+style = _G.style
+end
+if style == "Default" or style == "Blob" then
+else
+style = "Default"
+end
 local OrionLib = {
 	Elements = {},
 	ThemeObjects = {},
@@ -18,9 +25,17 @@ local OrionLib = {
 			Divider = Color3.fromRGB(60, 60, 100),
 			Text = Color3.fromRGB(240, 240, 240),
 			TextDark = Color3.fromRGB(150, 150, 150)
+		},
+		Blob = {
+			Main = Color3.fromRGB(40,60,40),
+			Second = Color3.fromRGB(50,80,50),
+			Stroke = Color3.fromRGB(60, 100, 60),
+			Divider = Color3.fromRGB(60, 60, 100),
+			Text = Color3.fromRGB(240, 240, 240),
+			TextDark = Color3.fromRGB(150, 150, 150)
 		}
 	},
-	SelectedTheme = "Default",
+	SelectedTheme = style and style or "Default",
 	Folder = nil,
 	SaveCfg = false
 }
@@ -561,7 +576,7 @@ function OrionLib:MakeWindow(WindowConfig)
 			}),
 			AddThemeObject(SetProps(MakeElement("Label", LocalPlayer.DisplayName, WindowConfig.HidePremium and 14 or 13), {
 				Size = UDim2.new(1, -60, 0, 13),
-				Position =  UDim2.new(0, 50, 0, 19),
+				Position =  UDim2.new(0, 50, 0, 12),
 				Font = Enum.Font.GothamBold,
 				ClipsDescendants = true
 			}), "Text"),
